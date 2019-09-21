@@ -51,6 +51,11 @@ def outroFrames(args):
         )
 
 
+def linearFade(step, start, end, steps):
+    i = float(step)/steps
+    return i * (end - start) + start
+
+
 def pauseFrames(args):
     frames = int(3*fps) + 1
     for i in range(0, frames):
